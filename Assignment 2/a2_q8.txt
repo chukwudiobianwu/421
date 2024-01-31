@@ -1,0 +1,28 @@
+# YOUR CODE GOES HERE (USING MARKDOWN)
+
+# Define parent-child relationships
+parent(homer, bart).
+parent(marge, bart).
+parent(homer, lisa).
+parent(marge, lisa).
+parent(homer, maggie).
+parent(marge, maggie).
+
+# Define the sibling relationship
+sibling(X, Y) :- parent(P, X), parent(P, Y), X \= Y.
+
+# Define the sibling relationship
+child(C, P) :- parent(P, C).
+
+
+# Query 1: Who are the children of Homer?
+parent(homer,C).
+
+# Query 2: Who are the parents of Bart?
+Child(Bart,P).
+
+# Query 3: Are Lisa and Homer siblings?
+sibling(lisa, homer).
+
+# Query 4: Are Lisa and Bart siblings?
+sibling(lisa, bart).
